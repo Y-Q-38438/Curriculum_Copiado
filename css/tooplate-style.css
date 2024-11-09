@@ -54,6 +54,13 @@ p {
   color: #5b5b5b;
 }
 
+.dark-mode p {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #F0F0F0;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
   letter-spacing: -1px;
@@ -266,6 +273,16 @@ b, strong {
   position: relative;
 }
 
+.dark-mode .navbar-toggler .navbar-toggler-icon {
+  background: #ffffff;
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin: 5px 0;
+  transition: all 0.4s ease;
+  position: relative;
+}
+
 .copyright-text {
   font-size: 16px;
   font-weight: normal;
@@ -296,7 +313,7 @@ b, strong {
 }
 
 .dark-mode {
-  background: #0c0c0d;
+  background: #191c20;
 }
 .dark-mode .navbar-light .navbar-nav .nav-link {
   color: rgba(255, 255, 255, 0.8);
@@ -308,7 +325,7 @@ b, strong {
   /*background: #0c0c0d;
   border-bottom: 1px solid #1f1f1f;*/
   
-  background: rgba(12, 12, 12, 0.5); /* Fondo blanco semi-transparente */
+  background: rgba(25, 28, 32, 0.5); /* Fondo oscuro semi-transparente */
   backdrop-filter: blur(10px); /* Efecto de desenfoque */
   border-radius: 10px; /* Bordes redondeados */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
@@ -492,9 +509,9 @@ b, strong {
     padding-bottom: 4rem;
   }
 
-  .color-mode {
+  /*.color-mode {
     display: none;
-  }
+  }*/
 
   .about-image {
     margin-top: 4em;
@@ -523,7 +540,20 @@ b, strong {
   }
 
   .navbar-collapse {
-    background: #ffffff;
+    background: rgba(255, 255, 255, 0.0); /* Fondo blanco semi-transparente */
+	backdrop-filter: blur(10px); /* Efecto de desenfoque */
+	border-radius: 10px; /* Bordes redondeados */
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  
+  .dark-mode .navbar-collapse {
+    /*background: #ffffff;*/
+	background: rgba(25, 28, 32, 0.0); /* Fondo oscuro semi-transparente */
+	backdrop-filter: blur(10px); /* Efecto de desenfoque */
+	border-radius: 10px; /* Bordes redondeados */
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /*Sombra para dar profundidad */
     text-align: center;
     padding-bottom: 20px;
   }
