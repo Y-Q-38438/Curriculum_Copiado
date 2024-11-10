@@ -39,6 +39,33 @@
 		}
 	</script>
 	
+	<!-- AUTOMATIC DARK MODE BY USER PREFERENCE SCRIPT -->
+	<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const body = document.body;
+            const colorModeIcon = document.querySelector('.color-mode-icon'); // Selecciona el icono
+
+            // Función para aplicar el tema oscuro si es necesario
+            function applyTheme() {
+                const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+                if (prefersDarkScheme.matches) {
+                    body.classList.add('dark-mode'); // Agrega la clase .dark-mode
+                    colorModeIcon.classList.add('active'); // Agrega la clase active al icono
+                } else {
+                    body.classList.remove('dark-mode'); // Elimina la clase .dark-mode
+                    colorModeIcon.classList.remove('active'); // Elimina la clase active del icono
+                }
+            }
+
+            // Llama a la función al cargar la página
+            applyTheme();
+
+            // Escucha cambios en la preferencia del tema
+            window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', applyTheme);
+        });
+    </script>
+	
 	<!-- ICONS -->
 	<script src="https://code.iconify.design/iconify-icon/1.0.0-beta.3/iconify-icon.min.js"></script>
 	<script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
