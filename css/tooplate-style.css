@@ -480,8 +480,10 @@ b, strong {
 
 .contact-info {
   background: #3071a0;
-  border-radius: 0 0 3px 3px;
+  border-radius: 10px 10px 10px 10px;
+  max-width: 600px;
   position: relative;
+  margin: auto;
   bottom: 8px;
 }
 .contact-info p, .contact-info a {
