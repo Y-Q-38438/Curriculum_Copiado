@@ -25,11 +25,11 @@
         var $anchor = $(this);
         $('html, body').stop().animate({
             scrollTop: $($anchor.attr('href')).offset().top - 49
-        }, 1000);
+        }, 300);
         event.preventDefault();
       });
-    });  
-
+    });
+	
     // TOOLTIP
     $('.social-links a').tooltip();
 
